@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="361ec152-af3e-47ca-8308-232eb84fdd40" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/library_book.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/library_book.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/library_book_categ.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/library_book_categ.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/library_book.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/library_book.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/library_book_categ.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/library_book_categ.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +17,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ZdSkP1SaH5AIzCUCNeY1qpSfvR" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />

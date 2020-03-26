@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
+from sqlite3.dbapi2 import Date
 
 from odoo import models, fields, api
 from odoo.exceptions import UserError
@@ -14,7 +15,8 @@ class LibraryBook(models.Model):
     _description = 'Library Book'
 
     name = fields.Char('Titulo', required=True)
-    date_updated = fields.Datetime('Ultima modificacion', copy=False)
+    date_updated = fields.Datetime('Ultima modificacion', default=lambda self: fields.datetime.now(), readonly=True)
+    current_user = fields.Many2one('res.users', 'Ultimo usuario editor', default=lambda self: self.env.user)
     category_id = fields.Many2one('library.book.category', string='Categoria')
     state = fields.Selection([
         ('available', 'Disponible'),
@@ -39,6 +41,8 @@ class LibraryBook(models.Model):
         for book in self:
             if book.is_allowed_transition(book.state, new_state):
                 book.state = new_state
+                self.current_user = lambda self: self.env.user
+                self.date_updated = lambda self: fields.datetime.now()
             else:
                 message = _('Pasar de %s a %s no esta permitido') % (book.state, new_state)
                 raise UserError(message)
@@ -55,51 +59,11 @@ class LibraryBook(models.Model):
     def make_broken(self):
         self.change_state('broken')
 
+    @api.onchange('name')
+    def change_field_value(self):
+        self.current_user = lambda self: self.env.user
+
     @api.multi
     def change_update_date(self):
         self.ensure_one()
         self.date_updated = fields.Datetime.now()
-
-    @api.multi
-    def find_book(self):
-        domain = [
-            '|',
-                '&', ('name', 'ilike', 'Book Name'),
-                     ('category_id.name', '=', 'Category Name'),
-                '&', ('name', 'ilike', 'Book Name 2'),
-                     ('category_id.name', '=', 'Category Name 2')
-        ]
-        books = self.search(domain)
-        logger.info('Books found: %s', books)
-        return True
-
-    @api.model
-    def get_all_library_members(self):
-        library_member_model = self.env['library.member']  # This is an empty recordset of model library.member
-        return library_member_model.search([])
-
-    def filter_books(self):
-        all_books = self.search([])
-        filtered_books = self.books_with_multiple_authors(all_books)
-        logger.info('Filtered Books: %s', filtered_books)
-
-    def mapped_books(self):
-        all_books = self.search([])
-        books_authors = self.get_author_names(all_books)
-        logger.info('Books Authors: %s', books_authors)
-
-    def sort_books(self):
-        all_books = self.search([])
-        books_sorted = self.sort_books_by_date(all_books)
-        logger.info('Books before sorting: %s', all_books)
-        logger.info('Books after sorting: %s', books_sorted)
-
-class LibraryMember(models.Model):
-    _name = 'library.member'
-    _inherits = {'res.partner': 'partner_id'}
-
-    partner_id = fields.Many2one('res.partner', ondelete='cascade')
-    date_start = fields.Date('Member Since')
-    date_end = fields.Date('Termination Date')
-    member_number = fields.Char()
-    date_of_birth = fields.Date('Date of birth')
