@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
-from sqlite3.dbapi2 import Date
+from datetime import time, datetime
 
 from odoo import models, fields, api
 from odoo.exceptions import UserError
@@ -13,10 +13,13 @@ logger = logging.getLogger(__name__)
 class LibraryBook(models.Model):
     _name = 'library.book'
     _description = 'Library Book'
+    _defaults = {
+        'date_updated': lambda *a: time.strftime('%Y-%m-%d %H:%M:%S')
+    }
 
     name = fields.Char('Titulo', required=True)
-    date_updated = fields.Datetime('Ultima modificacion', default=lambda self: fields.datetime.now(), readonly=True)
-    current_user = fields.Many2one('res.users', 'Ultimo usuario editor', default=lambda self: self.env.user)
+    date_updated = fields.Datetime('Ultima modificacion', readonly=True)
+    current_user = fields.Many2one('res.users', 'Ultimo usuario editor', default=lambda self: self.env.user, readonly=True)
     category_id = fields.Many2one('library.book.category', string='Categoria')
     state = fields.Selection([
         ('available', 'Disponible'),
@@ -41,8 +44,8 @@ class LibraryBook(models.Model):
         for book in self:
             if book.is_allowed_transition(book.state, new_state):
                 book.state = new_state
-                self.current_user = lambda self: self.env.user
-                self.date_updated = lambda self: fields.datetime.now()
+                self.current_user = self.env.uid
+                self.date_updated = datetime.today()
             else:
                 message = _('Pasar de %s a %s no esta permitido') % (book.state, new_state)
                 raise UserError(message)
@@ -58,10 +61,6 @@ class LibraryBook(models.Model):
 
     def make_broken(self):
         self.change_state('broken')
-
-    @api.onchange('name')
-    def change_field_value(self):
-        self.current_user = lambda self: self.env.user
 
     @api.multi
     def change_update_date(self):
