@@ -3,7 +3,7 @@
 
     <record id='tool_category_action' model='ir.actions.act_window'>
         <field name="name">Categorias de herramienta</field>
-        <field name="res_model">library.book.category</field>
+        <field name="res_model">tool.category</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
@@ -13,7 +13,7 @@
     <!-- Form View -->
     <record id="tool_category_view_form" model="ir.ui.view">
         <field name="name">Categories Form</field>
-        <field name="model">library.book.category</field>
+        <field name="model">tool.category</field>
         <field name="arch" type="xml">
             <form>
                 <group>
@@ -36,7 +36,7 @@
     <!-- Tree(list) View -->
     <record id="tool_category_view_tree" model="ir.ui.view">
         <field name="name">Categories List</field>
-        <field name="model">library.book.category</field>
+        <field name="model">tool.category</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>

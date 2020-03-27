@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-acl_book,library.book_default,model_library_book,,1,0,0,0
-acl_book_librarian,library.book_librarian,model_library_book,group_tools,1,1,1,1
-acl_book_category,library.book_category_default,model_library_book_category,,1,0,0,0
-acl_book_category_librarian,library.book_category_librarian,model_library_book_category,group_tools,1,1,1,1
-acl_book_brand,library.book_brand_default,model_library_book_brand,,1,0,0,0
-acl_book_brand_librarian,library.book_brand_librarian,model_library_book_brand,group_tools,1,1,1,1
+acl_book,tool_default,model_tool,,1,0,0,0
+acl_book_librarian,tool_librarian,model_tool,group_tools,1,1,1,1
+acl_book_category,tool_category_default,model_tool_category,,1,0,0,0
+acl_book_category_librarian,tool_category_librarian,model_tool_category,group_tools,1,1,1,1
+acl_book_brand,tool_brand_default,model_tool_brand,,1,0,0,0
+acl_book_brand_librarian,tool_brand_librarian,model_tool_brand,group_tools,1,1,1,1

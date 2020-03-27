@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 class Tool(models.Model):
-    _name = 'library.book'
+    _name = 'tool'
     _description = 'Tools base'
     _defaults = {
         'date_updated': lambda *a: time.strftime('%Y-%m-%d %H:%M:%S')
@@ -20,9 +20,9 @@ class Tool(models.Model):
     name = fields.Char('Titulo', required=True)
     date_updated = fields.Datetime('Ultimo uso', readonly=True)
     description = fields.Text('Descripcion')
-    brand_id = fields.Many2one('library.book.brand', string='Marca')
+    brand_id = fields.Many2one('tool.brand', string='Marca', required=True)
     current_user = fields.Many2one('res.users', 'Ultimo usuario', default=lambda self: self.env.user, readonly=True)
-    category_id = fields.Many2one('library.book.category', string='Categoria')
+    category_id = fields.Many2one('tool.category', string='Categoria', required=True)
     state = fields.Selection([
         ('available', 'Disponible'),
         ('notavailable', 'Usandose'),
