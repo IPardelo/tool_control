@@ -10,9 +10,9 @@ from odoo.tools.translate import _
 logger = logging.getLogger(__name__)
 
 
-class LibraryBook(models.Model):
+class Tool(models.Model):
     _name = 'library.book'
-    _description = 'Library Book'
+    _description = 'Tools base'
     _defaults = {
         'date_updated': lambda *a: time.strftime('%Y-%m-%d %H:%M:%S')
     }
@@ -43,13 +43,13 @@ class LibraryBook(models.Model):
 
     @api.multi
     def change_state(self, new_state):
-        for book in self:
-            if book.is_allowed_transition(book.state, new_state):
-                book.state = new_state
+        for tool in self:
+            if tool.is_allowed_transition(tool.state, new_state):
+                tool.state = new_state
                 self.current_user = self.env.uid
                 self.date_updated = datetime.today()
             else:
-                message = _('Pasar de %s a %s no esta permitido') % (book.state, new_state)
+                message = _('Pasar de %s a %s no esta permitido') % (tool.state, new_state)
                 raise UserError(message)
 
     def make_available(self):

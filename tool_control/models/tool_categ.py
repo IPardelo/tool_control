@@ -3,9 +3,9 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 
-class BookCategory(models.Model):
+class ToolCategory(models.Model):
     _name = 'library.book.category'
-
+    _description = 'Tools category'
     _parent_store = True
     _parent_name = "parent_id"
 

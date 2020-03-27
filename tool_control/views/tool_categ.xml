@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id='library_book_category_action' model='ir.actions.act_window'>
+    <record id='tool_category_action' model='ir.actions.act_window'>
         <field name="name">Categorias de herramienta</field>
         <field name="res_model">library.book.category</field>
         <field name="view_type">form</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="Categorias" id="library_book_category_menu" parent="library_base_menu" action="library_book_category_action"/>
+    <menuitem name="Categorias" id="tool_category_menu" parent="tool_base_menu" action="tool_category_action"/>
 
     <!-- Form View -->
-    <record id="library_book_category_view_form" model="ir.ui.view">
+    <record id="tool_category_view_form" model="ir.ui.view">
         <field name="name">Categories Form</field>
         <field name="model">library.book.category</field>
         <field name="arch" type="xml">
@@ -34,7 +34,7 @@
     </record>
 
     <!-- Tree(list) View -->
-    <record id="library_book_category_view_tree" model="ir.ui.view">
+    <record id="tool_category_view_tree" model="ir.ui.view">
         <field name="name">Categories List</field>
         <field name="model">library.book.category</field>
         <field name="arch" type="xml">

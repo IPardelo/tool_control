@@ -2,7 +2,7 @@
 {
     'name': "My Tool Control",
     'summary': "Control de herramientas por usuarios",
-    'description': "Aplicacion para el registro de herramientas en un taller comunitario",
+    'description': "Aplicacion para el registro de herramientas en un taller comunitario. \n Registra las herramientas, sus marcas y categorias y controla quien la usa y a que hora.",
     'author': "Ismael Castiñeira Paz",
     'website': "https://www.osmeusproxectos.es",
     'category': 'Extra Tools',
@@ -11,8 +11,8 @@
     'data': [
         'security/groups.xml',
         'security/ir.model.access.csv',
-        'views/library_book.xml',
-        'views/library_book_categ.xml',
-        'views/marcas.xml'
+        'views/tool.xml',
+        'views/tool_categ.xml',
+        'views/tool_brand.xml'
     ],
 }
