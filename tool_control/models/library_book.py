@@ -18,15 +18,17 @@ class LibraryBook(models.Model):
     }
 
     name = fields.Char('Titulo', required=True)
-    date_updated = fields.Datetime('Ultima modificacion', readonly=True)
-    current_user = fields.Many2one('res.users', 'Ultimo usuario editor', default=lambda self: self.env.user, readonly=True)
+    date_updated = fields.Datetime('Ultimo uso', readonly=True)
+    description = fields.Text('Descripcion')
+    brand_id = fields.Many2one('library.book.brand', string='Marca')
+    current_user = fields.Many2one('res.users', 'Ultimo usuario', default=lambda self: self.env.user, readonly=True)
     category_id = fields.Many2one('library.book.category', string='Categoria')
     state = fields.Selection([
         ('available', 'Disponible'),
         ('notavailable', 'Usandose'),
         ('lost', 'Perdida'),
         ('broken', 'Rota')],
-        'State', default="available")
+        'Estado', default="available")
 
     @api.model
     def is_allowed_transition(self, old_state, new_state):
