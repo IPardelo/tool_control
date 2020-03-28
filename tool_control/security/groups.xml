@@ -2,6 +2,9 @@
 <odoo>
     <record id="group_tools" model="res.groups">
         <field name="name">Puede usar herramientas</field>
+    </record>
+    <record id="admin_tools" model="res.groups">
+        <field name="name">Admin del modulo herramientas</field>
         <field name="users" eval="[(4, ref('base.user_admin'))]"/>
     </record>
 </odoo>

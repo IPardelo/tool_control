@@ -8,7 +8,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="Proveedores" id="tool_provider" parent="tool_base_menu" action="tool_providers"/>
+    <menuitem name="Proveedores" id="tool_provider" parent="tool_base_menu" action="tool_providers" groups="admin_tools"/>
 
     <!-- Form View -->
     <record id="providers_view_form" model="ir.ui.view">

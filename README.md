@@ -81,14 +81,19 @@ Nesta vista podemos crear e visualizar os proveedores que temos rexistradas.  Po
 
 ## **Habilitar usuarios**
 
+>**Como habilito un usuario para que poida usar o modulo?** 
+
+Podemos ver na parte inferior da imaxe dous recadros de verificación:
+ * **Puede usar herramientas**: é o permiso básico para que un usuario poida usar as ferramentas. Só pode cambiar o estado das mesmas.
+ * **Admin del modulo herramientas**: é o permiso de control total. Pode crear, editar e eliminar ferramentas, categorias, marcas e proveedores.
+
 *Lista de usuarios de proba*
 ![Usuarios](recursos/img/usuarios.gif)
 
-Como habilito un usuario para que poida usar o modulo?  
-Podemos ver na imaxe anterior unha casilla na esquina inferior dereita que pon "**Puede usar herramientas**" que debe estar marcada. Unha vez marcada o usuario pode usar o modulo libremente.
+ >**Na foto anterior que pode facer cada usuario?** 
 
+Podemos ver que os usuarios "**Isma C**" e "**Lola B**"" tan só poden facer uso das ferramentas e "**Mitchell**" está habilitado como administrador do módulo.
 
 *****
-
 
 Módulo e documentacion feitos por [**Ismael Castiñeira Paz**](https://osmeusproxectos.es)
