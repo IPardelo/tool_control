@@ -9,3 +9,4 @@ class Brand(models.Model):
 
     name = fields.Char('Marca', required=True)
     description = fields.Text('Descripcion')
+    provider_id = fields.Many2one('tool.provider', string='Proveedor')

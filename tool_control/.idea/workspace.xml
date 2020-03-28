@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="361ec152-af3e-47ca-8308-232eb84fdd40" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/models/tool_provider.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/tool_provider.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../recursos/tool.brand.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../recursos/tool.brand.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__manifest__.py" beforeDir="false" afterPath="$PROJECT_DIR$/__manifest__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/tool.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/tool.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/tool_brand.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/tool_brand.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tool_categ.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/tool_categ.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security/ir.model.access.csv" beforeDir="false" afterPath="$PROJECT_DIR$/security/ir.model.access.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/tool.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/tool.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/tool_brand.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/tool_brand.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/tool_categ.xml" beforeDir="false" afterPath="$PROJECT_DIR$/views/tool_categ.xml" afterDir="false" />
     </list>
@@ -38,7 +42,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ejercicios/Chapter06/r10_sorting_recordset/my_library" />
   </component>
   <component name="ServiceViewManager">
     <option name="showServicesTree" value="false" />
@@ -61,13 +65,26 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1585170456669" />
-    <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585170317100">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="1553" y="1371" width="424" height="491" key="FileChooserDialogImpl" timestamp="1585371275741">
+      <screen x="810" y="1080" width="1920" height="1080" />
     </state>
     <state x="743" y="311" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1585170317100" />
-    <state x="675" y="130" width="863" height="885" key="find.popup" timestamp="1585348216267">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="1553" y="1371" key="FileChooserDialogImpl/810.1080.1920.1080/0.0.1920.1080@810.1080.1920.1080" timestamp="1585371275741" />
+    <state x="1485" y="1186" width="863" height="908" key="find.popup" timestamp="1585371926088">
+      <screen x="810" y="1080" width="1920" height="1080" />
     </state>
     <state x="675" y="130" width="863" height="885" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1585348216267" />
+    <state x="1485" y="1186" width="863" height="908" key="find.popup/810.1080.1920.1080/0.0.1920.1080@810.1080.1920.1080" timestamp="1585371926088" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/models/__init__.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

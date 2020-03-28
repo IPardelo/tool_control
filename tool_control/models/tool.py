@@ -17,7 +17,7 @@ class Tool(models.Model):
         'date_updated': lambda *a: time.strftime('%Y-%m-%d %H:%M:%S')
     }
 
-    name = fields.Char('Titulo', required=True)
+    name = fields.Char('Herramienta', required=True)
     date_updated = fields.Datetime('Ultimo uso', readonly=True)
     description = fields.Text('Descripcion')
     brand_id = fields.Many2one('tool.brand', string='Marca', required=True)
