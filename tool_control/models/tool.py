@@ -22,7 +22,7 @@ class Tool(models.Model):
     description = fields.Text('Descripcion')
     brand_id = fields.Many2one('tool.brand', string='Marca', required=True)
     current_user = fields.Many2one('res.users', 'Ultimo usuario', default=lambda self: self.env.user, readonly=True)
-    category_id = fields.Many2one('tool.category', string='Categoria', required=True)
+    category_id = fields.Many2many('tool.category', string='Categoria', required=True)
     state = fields.Selection([
         ('available', 'Disponible'),
         ('notavailable', 'Usandose'),
@@ -68,3 +68,7 @@ class Tool(models.Model):
     def change_update_date(self):
         self.ensure_one()
         self.date_updated = fields.Datetime.now()
+
+    @api.model
+    def get_category(self, category):
+        return category.mapped('tool_category.name')
