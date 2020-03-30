@@ -20,9 +20,11 @@
                     <group>
                         <field name="name"/>
                         <field name="provider_id"/>
+                        <field name="description"/>
                     </group>
                     <group>
-                        <field name="description"/>
+                        <field name="imagen" widget="image" class="oe_avatar" />
+
                     </group>
                 </group>
             </form>

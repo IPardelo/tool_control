@@ -54,15 +54,4 @@
             </tree>
         </field>
     </record>
-
-    <!-- Search View -->
-    <record id="tool_view_search" model="ir.ui.view">
-        <field name="name">Tools Search</field>
-        <field name="model">tool</field>
-        <field name="arch" type="xml">
-            <search>
-                <field name="name"/>
-            </search>
-        </field>
-    </record>
 </odoo>

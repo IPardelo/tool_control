@@ -1,9 +1,9 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-acl_tool,tool_default,model_tool,,1,0,0,0
-acl_tool_librarian,tool_librarian,model_tool,,1,1,1,1
-acl_tool_category,tool_category_default,model_tool_category,tool_control.admin_tools,1,0,0,0
-acl_tool_category_librarian,tool_category_librarian,model_tool_category,tool_control.admin_tools,1,1,1,1
-acl_tool_brand,tool_brand_default,model_tool_brand,tool_control.admin_tools,1,0,0,0
-acl_tool_brand_librarian,tool_brand_librarian,model_tool_brand,tool_control.admin_tools,1,1,1,1
-acl_tool_provider,tool_provider_default,model_tool_provider,tool_control.admin_tools,1,0,0,0
-acl_tool_provider_librarian,tool_provider_librarian,model_tool_provider,tool_control.admin_tools,1,1,1,1
+tool,tool_default,model_tool,,1,0,0,0
+tool_admin,tool_admin,model_tool,,1,1,1,1
+tool_category,tool_category_default,model_tool_category,tool_control.admin_tools,1,0,0,0
+tool_category_admin,tool_category_admin,model_tool_category,tool_control.admin_tools,1,1,1,1
+tool_brand,tool_brand_default,model_tool_brand,tool_control.admin_tools,1,0,0,0
+tool_brand_admin,tool_brand_admin,model_tool_brand,tool_control.admin_tools,1,1,1,1
+tool_provider,tool_provider_default,model_tool_provider,tool_control.admin_tools,1,0,0,0
+tool_provider_admin,tool_provider_admin,model_tool_provider,tool_control.admin_tools,1,1,1,1

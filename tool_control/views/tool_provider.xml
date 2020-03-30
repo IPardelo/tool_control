@@ -5,7 +5,7 @@
         <field name="name">Proveedores de marca</field>
         <field name="res_model">tool.provider</field>
         <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,form</field>
     </record>
 
     <menuitem name="Proveedores" id="tool_provider" parent="tool_base_menu" action="tool_providers" groups="admin_tools"/>
@@ -31,17 +31,31 @@
         </field>
     </record>
 
-    <!-- Tree(list) View -->
-    <record id="providers_view_tree" model="ir.ui.view">
-        <field name="name">Providerss List</field>
+        <!-- Kanban View -->
+    <record id="proider_view_kanban" model="ir.ui.view">
+        <field name="name">Provider List</field>
         <field name="model">tool.provider</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-                <field name="email"/>
-                <field name="phone"/>
-            </tree>
-        </field>
-    </record>
+                <kanban>
+                    <field name="name" />
+                    <templates>
+                    <t t-name="kanban-box">
+                            <div class="providersviewkanban">
+                                <div class="providers_desc">
+                                    <h4>
+                                        <a type="edit"><field name="name"></field></a>
+                                    </h4>
+                                    <ul>
+                                        <h6>E-Mail: </h6> <field name="email"/>
+                                        <h6>Teléfono: </h6><field name="phone"/>
+                                        <h6>Dirección: </h6><field name="address"/>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
 
 </odoo>
