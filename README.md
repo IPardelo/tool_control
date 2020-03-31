@@ -14,6 +14,7 @@ git clone https://github.com/IPardelo/sxe.git
  *****
 
 ## Indice:
+ * Menu
  * Ferramentas
  * Categorias
  * Marcas
@@ -24,26 +25,34 @@ git clone https://github.com/IPardelo/sxe.git
 
 *****
 
+## **Menu**
+
+![FerrMenuamentas](recursos/img/menu.gif)
+
+
+*****
+
 ## **Ferramentas**
 
-*Vista de ferramentas creadas*
+*Vista de ferramentas de proba*
 ![Ferramentas](recursos/img/herramientas.png)
 
-Nesta vista podemos crear e visualizar as ferramentas que temos rexistradas. Podemos ver a que categoría pertence cada unha, o estado no que está (**Dispoñible, Usándose, Perdida ou Rota**) e o último usuario e horario ao que fui usado.
+Nesta vista podemos crear e visualizar as ferramentas que temos rexistradas.  
+
+Podemos ver a que categoría pertence cada unha, o estado no que está (**Dispoñible, Usándose, Perdida ou Rota**) e o último usuario e horario ao que fui usado.
 
 *Vista dunha ferramenta*
-![Ferramentas](recursos/img/vistaFerramenta.png)
+![Ferramentas](recursos/img/vistaherramienta.gif)
 
-Unha vez dentro da ferramenta podemos ver a marca da mesma ou editar o estado. O estado ten restriccións lóxicas, como por exemplo unha ferramenta en estado "**roto**" non pode volver a estar "**Disponible**".
+Unha vez dentro da ferramenta podemos ver a marca da mesma ou editar o estado cos botóns da cabeceira. O estado ten restriccións lóxicas, como por exemplo unha ferramenta en estado "**roto**" non pode volver a estar "**Disponible**".
 
-Aqui podemos ver como ao cambiar o estado, cambia o "**Último uso**" e o "**Último usuario**".
-![Ferramentas](recursos/img/usoferramenta.gif)
+Podemos ver como ao cambiar o estado, cambia o "**Último uso**" e o "**Último usuario**".
 
 *****
 
 ## **Categorias**
 
-*Vista de categorias creadas*
+*Vista de categorias de proba*
 ![Categorias](recursos/img/categorias.png)
 
 Nesta vista podemos crear e visualizar as categorias que temos rexistradas. 
@@ -56,10 +65,12 @@ Podemos ver o nome, a descripción e a categoría pai a que pertence cada unha (
 
 ## **Marcas**
 
-*Vista de marcas creadas*
+*Vista de marcas de proba*
 ![Marcas](recursos/img/marcas.png)
 
-Nesta vista podemos crear e visualizar as marcas que temos rexistradas.  As marcas son o apartado máis sinxelo, xa que só teñen como propiedade o nome e a descripción.
+Nesta vista podemos crear e visualizar as marcas que temos rexistradas. Na vista principal ó abrir o menu de **marcas** vemos unha vista "*kanban*" das mesmas que nos mostra o proveedor, o nome e unha foto para identificala máis rápido.
+
+Para editar ou ver unha entrada só debemos facer "*click*" na mesma.
 
 *Vista dunha marca*
 ![Marcas](recursos/img/vistamarcas.png)
@@ -71,7 +82,9 @@ Nesta vista podemos crear e visualizar as marcas que temos rexistradas.  As marc
 *Lista de proveedores de proba*
 ![Proveedores](recursos/img/proveedores.png)
 
-Nesta vista podemos crear e visualizar os proveedores que temos rexistradas.  Podemos ver o nome, o telefono e o email.
+Nesta vista "*kanban*" podemos crear e visualizar os proveedores que temos rexistrados.  Podemos ver todos os seus datos excepto a descripcion.  
+
+Para ver a descripcion debemos facer click no nome do proveedor e abrirasenos unha vista de "*formulario*" como a seguinte:
 
 *Vista dun proveedor*
 ![Proveedores](recursos/img/vistaproveedores.png)
