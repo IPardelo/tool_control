@@ -11,7 +11,6 @@
     <menuitem name="My Tool Control" id="tool_base_menu" />
     <menuitem name="Herramientas" id="tool_menu" parent="tool_base_menu" action="tool_action" groups="group_tools,admin_tools"/>
         <menuitem name="Herramientas" id="tool_menuu" parent="tool_menu" action="tool_action" groups="group_tools,admin_tools"/>
-        <menuitem name="Categorias" id="tool_category_menu" parent="tool_menu" action="tool_category_action" groups="admin_tools"/>
 
     <!-- Form View -->
     <record id="tool_view_form" model="ir.ui.view">
