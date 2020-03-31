@@ -3,7 +3,7 @@
  Si xa tes [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) instalado, clona o repositorio con:
 
  ```
-git clone https://github.com/IPardelo/sxe.git
+git clone https://github.com/IPardelo/tool_control.git
  ```
 
  *****
