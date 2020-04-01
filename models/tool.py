@@ -23,12 +23,14 @@ class Tool(models.Model):
     brand_id = fields.Many2one('tool.brand', string='Marca', required=True)
     current_user = fields.Many2one('res.users', 'Ultimo usuario', default=lambda self: self.env.user, readonly=True)
     category_id = fields.Many2many('tool.category', string='Categoria', required=True)
+    contar = fields.Integer('Veces usado',readonly=True)
     state = fields.Selection([
         ('available', 'Disponible'),
         ('notavailable', 'Usandose'),
         ('lost', 'Perdida'),
         ('broken', 'Rota')],
         'Estado', default="available")
+
 
     @api.model
     def is_allowed_transition(self, old_state, new_state):
@@ -57,6 +59,7 @@ class Tool(models.Model):
 
     def make_notavailable(self):
         self.change_state('notavailable')
+        self.contar = self.contar + 1
 
     def make_lost(self):
         self.change_state('lost')

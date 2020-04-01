@@ -5,7 +5,7 @@ from odoo.exceptions import ValidationError
 
 class Brand(models.Model):
     _name = 'tool.provider'
-    _description = 'Tools brands'
+    _description = 'Tool providers'
 
     name = fields.Char('Proveedor', required=True)
     description = fields.Text('Descripcion')

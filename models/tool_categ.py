@@ -5,7 +5,7 @@ from odoo.exceptions import ValidationError
 
 class ToolCategory(models.Model):
     _name = 'tool.category'
-    _description = 'Tools category'
+    _description = 'Tool category'
     _parent_store = True
     _parent_name = "parent_id"
 
@@ -21,6 +21,18 @@ class ToolCategory(models.Model):
         'tool.category', 'parent_id',
         string='Subcategorias')
     parent_path = fields.Char(index=True)
+
+    contar = fields.Integer(
+        string='Num. subcategorias',
+        compute='_contar',
+        store=False,
+        compute_sudo='False',
+    )
+
+    @api.model
+    def _contar(self):
+        for record in self:
+            record.contar = len(record.child_ids)
 
     @api.constrains('parent_id')
     def _check_hierarchy(self):

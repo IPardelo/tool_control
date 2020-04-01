@@ -38,15 +38,14 @@ git clone https://github.com/IPardelo/tool_control.git
 ![Ferramentas](recursos/img/herramientas.png)
 
 Nesta vista podemos crear e visualizar as ferramentas que temos rexistradas.  
-
-Podemos ver a que categoría pertence cada unha, o estado no que está (**Dispoñible, Usándose, Perdida ou Rota**) e o último usuario e horario ao que fui usado.
+Podemos ver a que categoría pertence cada unha, o estado no que está (**Dispoñible, Usándose, Perdida ou Rota**) e o último usuario e horario ao que foi usado.
 
 *Vista dunha ferramenta*
 ![Ferramentas](recursos/img/vistaherramienta.gif)
 
 Unha vez dentro da ferramenta podemos ver a marca da mesma ou editar o estado cos botóns da cabeceira. O estado ten restriccións lóxicas, como por exemplo unha ferramenta en estado "**roto**" non pode volver a estar "**Disponible**".
 
-Podemos ver como ao cambiar o estado, cambia o "**Último uso**" e o "**Último usuario**".
+Podemos ver como ao cambiar o estado, cambia o "**Último uso**", "**Último usuario**" e se actualiza o número de veces que foi usado ao entrar no estado "**Usándose**".
 
 *****
 
@@ -61,6 +60,7 @@ Podemos ver o nome, a descripción e a categoría pai a que pertence cada unha (
 *Vista dunha categoría*
 ![Categorias](recursos/img/vistacategorias.png)
 
+Unha vez dentro da categoría podemos ver o mesmo que na vista anterior máis a posibilidade de ver as subcategorías e un contador das mesmas.
 *****
 
 ## **Marcas**
@@ -89,6 +89,7 @@ Para ver a descripcion debemos facer click no nome do proveedor e abrirasenos un
 *Vista dun proveedor*
 ![Proveedores](recursos/img/vistaproveedores.png)
 
+Unha vez dentro do proveedor podemos ver tamén todas as marcas de ferramentas que nos suministra e un contador das mesmas.
 
 *****
 
