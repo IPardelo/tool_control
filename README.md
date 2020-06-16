@@ -8,8 +8,7 @@ git clone https://github.com/IPardelo/tool_control.git
 
  *****
 
- Módulo de odoo (version 12) para control de ferramentas.  
- Este módulo está feito en base a unha idea que me dou meu pai polos problemas que ten el e os seus compañeiros no taller do traballo para encontrar quen usou, esta usando, perdeu ou rompeu unha ferramenta.
+ Módulo de odoo (version 12) para control de ferramentas e saber quen usou, esta usando, perdeu ou rompeu unha ferramenta nun taller.
 
  *****
 
